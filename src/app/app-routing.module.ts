@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'drive' },
+  { path: 'drive', loadChildren: './drive/drive.module#DriveModule' },
+  { path: '**', component: PathNotFoundComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
