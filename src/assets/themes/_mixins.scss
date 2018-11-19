@@ -1,0 +1,21 @@
+@mixin app-theme-customization($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  $white: white;
+  $app-theme-light-text-color-grey: #616161;
+
+  .app-primary-bg {
+    background: mat-color($primary);
+  }
+
+  .mat-toolbar.app-toolbar {
+    background: $white;
+  }
+
+  .mat-list-item.app-list-item {
+    color: $app-theme-light-text-color-grey;
+  }
+}
+

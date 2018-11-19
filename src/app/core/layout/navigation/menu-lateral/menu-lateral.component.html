@@ -1,0 +1,56 @@
+<div class="flex-container flex-column">
+  <div class="flex-item logo">
+    <mat-icon svgIcon="google-drive"></mat-icon>
+    <span>GDrive</span>
+  </div>
+  <div class="flex-item button-container">
+    <div class="hidden-button" [matMenuTriggerFor]="addMenu"></div>
+    <div class="flex-container button-new mat-elevation-z1" appClassOnHover="mat-elevation-z3" (click)="openAddMenu()">
+      <div class="button-new__icon">
+        <mat-icon>add</mat-icon>
+      </div>
+      <div class="button-new__text">New</div>
+    </div>
+    <mat-menu #addMenu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>create_new_folder</mat-icon>
+        Folder
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item>
+        <mat-icon svgIcon="file-upload"></mat-icon>
+        Import files
+      </button>
+      <button mat-menu-item>
+        <mat-icon svgIcon="folder-upload"></mat-icon>
+        Import folder
+      </button>
+    </mat-menu>
+  </div>
+  <mat-list class="flex-item">
+    <mat-list-item class="app-list-item actions-list-item" data-is-active="true" data-is-dropdown="true">
+      <mat-icon svgIcon="google-drive"></mat-icon>
+      My Drive
+    </mat-list-item>
+    <mat-list-item class="app-list-item actions-list-item" data-is-dropdown="true">
+      <mat-icon svgIcon="cellphone-link"></mat-icon>
+      Computer
+    </mat-list-item>
+    <mat-list-item class="app-list-item actions-list-item">
+      <mat-icon svgIcon="account-multiple"></mat-icon>
+      Shared with me
+    </mat-list-item>
+    <mat-list-item class="app-list-item actions-list-item">
+      <mat-icon svgIcon="clock-outline"></mat-icon>
+      Recently
+    </mat-list-item>
+    <mat-list-item class="app-list-item actions-list-item">
+      <mat-icon svgIcon="star"></mat-icon>
+      Follows
+    </mat-list-item>
+    <mat-list-item class="app-list-item actions-list-item">
+      <mat-icon svgIcon="delete"></mat-icon>
+      Trash
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-menu-top',
+  templateUrl: 'menu-top.component.html',
+  styleUrls: ['menu-top.component.scss']
 })
-export class DashboardComponent implements OnInit {
+
+export class MenuTopComponent implements OnInit {
   isSearchBarFocus = false;
 
   documents = [

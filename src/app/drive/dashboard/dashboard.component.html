@@ -1,3 +1,27 @@
-<p>
-  dashboard works!
-</p>
+<!-- <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="flex-container">
+      <div class="search-bar" [attr.data-is-focus]="isSearchBarFocus" [ngClass]="{ 'mat-elevation-z4': isSearchBarFocus }" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+        <button class="search-bar__actions" mat-icon-button><mat-icon>search</mat-icon></button>
+        <input class="search-bar__input" placeholder="Search on GDrive" aria-label="Search on GDrive" [matAutocomplete]="auto" [matAutocompleteConnectedTo]="origin" (focus)="toggleSearchbarFocus()" (focusout)="toggleSearchbarFocus()">
+        <mat-autocomplete class="test" #auto="matAutocomplete">
+          <mat-option *ngFor="let doc of documents" [value]="doc.name">
+            <span class="document-icon">{{ doc.type }}</span>
+            <span class="document-name">{{doc.name}}</span>
+          </mat-option>
+        </mat-autocomplete>
+        <button class="search-bar__actions" mat-icon-button><mat-icon>close</mat-icon></button>
+        <button class="search-bar__actions" mat-icon-button><mat-icon>keyboard_arrow_down</mat-icon></button>
+      </div>
+      <div class="user-details">
+
+      </div>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span>Second Row</span>
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warning</button>
+  </mat-toolbar-row>
+</mat-toolbar> -->

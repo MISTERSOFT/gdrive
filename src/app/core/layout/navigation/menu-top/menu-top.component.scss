@@ -1,12 +1,12 @@
 .search-bar {
-  background: #f3f3f3;
+  background: whitesmoke;
   border-radius: 3px;
-  transition: .1s box-shadow, .3s background;
+  transition: .3s box-shadow, .3s background;
   &[data-is-focus="true"] {
     background: white;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    border-bottom: 1px solid #f3f3f3;
+    // border-bottom: 1px solid #f3f3f3;
   }
   &__actions {
     margin: 4px;
@@ -19,5 +19,19 @@
     background: transparent;
     border: none;
     outline: none;
+  }
+}
+
+.user-profile {
+  .avatar-round {
+    height: 32px;
+    width: 32px;
+    background: #6b6b6b;
+    border-radius: 50%;
+    margin: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 35px;
   }
 }

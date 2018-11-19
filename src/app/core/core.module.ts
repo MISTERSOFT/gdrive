@@ -1,14 +1,31 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MaterialModule } from '@app/core/layout';
+import { MatAutocompleteModule, MatButtonModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { ClassOnHoverDirective, MenuLateralComponent, MenuTopComponent } from './layout';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MenuTopComponent,
+    MenuLateralComponent,
+    ClassOnHoverDirective
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatToolbarModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatListModule
   ],
   exports: [
-    MaterialModule
+    CommonModule,
+    MatSidenavModule,
+    MenuTopComponent,
+    MenuLateralComponent
   ]
 })
 export class CoreModule { }
