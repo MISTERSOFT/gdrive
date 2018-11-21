@@ -19,7 +19,7 @@ import { ClassOnHoverDirective, MenuLateralComponent, MenuTopComponent } from '.
     MatIconModule,
     MatMenuModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
   ],
   exports: [
     CommonModule,
