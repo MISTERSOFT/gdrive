@@ -35,3 +35,11 @@
     line-height: 35px;
   }
 }
+
+.app-toolbar {
+  ::ng-deep {
+    .mat-toolbar-row {
+      padding-left: 2px;
+    }
+  }
+}
