@@ -10,12 +10,7 @@ import { BrowserService } from '@app/core/layout';
 export class TilesViewComponent implements OnInit {
   folders: any[];
   files: any[];
-  tiles: any[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
+  recentFiles: any[];
   gridCols = 8;
 
   constructor(private browser: BrowserService) { }
@@ -64,8 +59,12 @@ export class TilesViewComponent implements OnInit {
       { name: 'File 5' },
       { name: 'File 6' },
     ];
-  }
-  toggleCols() {
-    this.gridCols = this.gridCols === 5 ? 3 : 5;
+    this.recentFiles = [
+      { name: 'File 1', lastOpeningDate: new Date() },
+      { name: 'File 2', lastOpeningDate: new Date() },
+      { name: 'File 3', lastOpeningDate: new Date() },
+      { name: 'File 4', lastOpeningDate: new Date() },
+      { name: 'File 5', lastOpeningDate: new Date() }
+    ];
   }
 }

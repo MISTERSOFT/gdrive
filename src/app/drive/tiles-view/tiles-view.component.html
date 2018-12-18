@@ -1,3 +1,5 @@
+<app-recent-opened-files [recentFiles]="recentFiles"></app-recent-opened-files>
+
 <h3 class="header-level-3">Folders</h3>
 <div class="grid-container">
   <mat-grid-list [cols]="gridCols" rowHeight="48px" gutterSize="20px">
@@ -9,7 +11,7 @@
 
 <h3 class="header-level-3">Files</h3>
 <div class="grid-container">
-  <mat-grid-list [cols]="gridCols" rowHeight="144px" gutterSize="20px">
+  <mat-grid-list [cols]="gridCols" rowHeight="192px" gutterSize="20px">
     <mat-grid-tile *ngFor="let file of files">
       <app-tile-file class="tile-item" [data]="file.name"></app-tile-file>
     </mat-grid-tile>

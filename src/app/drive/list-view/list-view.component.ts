@@ -12,6 +12,7 @@ export class ListViewComponent implements OnInit {
   dataSource = new MatTableDataSource();
   displayedColumns: string[] = ['name', 'owner', 'lastUpdate', 'fileSize'];
   private documents: { name: string, owner: string, lastUpdate: Date, fileSize: string }[] = [];
+  recentFiles: any[];
   constructor() { }
 
   ngOnInit() {
@@ -21,5 +22,13 @@ export class ListViewComponent implements OnInit {
     }
     this.dataSource.data = this.documents;
     this.dataSource.sort = this.$matSort;
+
+    this.recentFiles = [
+      { name: 'File 1', lastOpeningDate: new Date() },
+      { name: 'File 2', lastOpeningDate: new Date() },
+      { name: 'File 3', lastOpeningDate: new Date() },
+      { name: 'File 4', lastOpeningDate: new Date() },
+      { name: 'File 5', lastOpeningDate: new Date() }
+    ];
   }
 }

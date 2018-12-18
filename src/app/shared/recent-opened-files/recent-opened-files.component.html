@@ -1,0 +1,8 @@
+<h3 class="header-level-3">Rapid access</h3>
+<div class="grid-container">
+  <mat-grid-list [cols]="gridCols" rowHeight="230px" gutterSize="20px">
+    <mat-grid-tile *ngFor="let file of recentFiles$ | async">
+      <app-tile-file class="tile-item" [data]="file.name" [lastOpeningDate]="file.lastOpeningDate"></app-tile-file>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

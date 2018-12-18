@@ -17,7 +17,7 @@
     height: 48px;
   }
   &.file {
-    height: 144px;
+    // height: 144px;
   }
   // &[data-selected="true"] {
   //   background: rgba($app-selected, 0.14);
@@ -43,5 +43,25 @@
     // [data-selected="true"] & {
     //   color: $app-selected;
     // }
+  }
+  &__last-opening-date {
+    font-size: 12px;
+    color: grey;
+  }
+
+  &.recent {
+    & .flex-container {
+      flex-flow: wrap;
+      padding: 10px;
+    }
+    & .tile__icon {
+      margin: 0 12px 0 0;
+    }
+    & .tile__last-opening-date {
+      font-size: 12px;
+      color: grey;
+      width: 100%;
+      margin-top: 4px;
+    }
   }
 }
