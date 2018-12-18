@@ -1,0 +1,28 @@
+<table mat-table [dataSource]="dataSource" matSort class="list">
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="main-column">Name</th>
+    <td mat-cell *matCellDef="let doc">{{doc.name}}</td>
+  </ng-container>
+
+  <!-- Owner Column -->
+  <ng-container matColumnDef="owner">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Owner</th>
+    <td mat-cell *matCellDef="let doc">{{doc.owner}}</td>
+  </ng-container>
+
+  <!-- Last update Column -->
+  <ng-container matColumnDef="lastUpdate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Last update</th>
+    <td mat-cell *matCellDef="let doc">{{doc.lastUpdate | date}}</td>
+  </ng-container>
+
+  <!-- File size Column -->
+  <ng-container matColumnDef="fileSize">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>File size</th>
+    <td mat-cell *matCellDef="let doc">{{doc.fileSize}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

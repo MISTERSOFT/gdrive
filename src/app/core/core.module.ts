@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatAutocompleteModule, MatButtonModule, MatDividerModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatAutocompleteModule, MatButtonModule, MatDividerModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { ClassOnHoverDirective, MenuLateralComponent, MenuTopComponent } from './layout';
 
 @NgModule({
@@ -20,6 +20,7 @@ import { ClassOnHoverDirective, MenuLateralComponent, MenuTopComponent } from '.
     MatMenuModule,
     MatDividerModule,
     MatListModule,
+    MatGridListModule
   ],
   exports: [
     CommonModule,

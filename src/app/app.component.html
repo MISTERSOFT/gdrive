@@ -1,10 +1,11 @@
-<mat-drawer-container class="drawer-container">
-  <!-- app-primary-bg -->
-  <mat-drawer class="drawer" mode="side" opened>
-    <app-menu-lateral></app-menu-lateral>
-  </mat-drawer>
-  <mat-drawer-content>
-    <app-menu-top></app-menu-top>
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+<main [ngClass]="themeValue">
+  <mat-drawer-container class="drawer-container">
+    <mat-drawer class="drawer" mode="side" opened>
+      <app-menu-lateral></app-menu-lateral>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-menu-top></app-menu-top>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</main>

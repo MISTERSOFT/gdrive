@@ -6,13 +6,59 @@
 @import 'variables';
 @import 'mixins';
 
+
+//
+// Light theme
+//
+// Angular light theme
+// $app-theme-light-primary: mat-palette($mat-grey, 50, 100, 700);
+// $app-theme-light-accent: mat-palette($mat-light-blue);
+$app-theme-light-primary: mat-palette($mat-deep-orange, A200);
+$app-theme-light-accent: mat-palette($mat-deep-orange, A200);
+$app-theme-light-warn: mat-palette($mat-deep-orange, A200);
+
+$angular-theme-light: mat-light-theme(
+  $app-theme-light-primary,
+  $app-theme-light-accent,
+  $app-theme-light-warn,
+);
+// Custom app light theme color
+$app-theme-light: (
+  app-selected: map-get($mat-blue, 600),
+  app-default-text-color: map-get($mat-grey, 700),
+  app-primary-color: white
+);
+
+
+//
+// Dark theme
+//
+$app-theme-dark-primary: mat-palette($mat-blue-grey);
+$app-theme-dark-accent: mat-palette($mat-light-blue);
+$app-theme-dark-warn: mat-palette($mat-deep-orange, A200);
+
+$angular-theme-dark: mat-dark-theme(
+  $app-theme-dark-primary,
+  $app-theme-dark-accent,
+  $app-theme-dark-warn,
+);
+// Custom app dark theme color
+$app-theme-dark: (
+  app-selected: map-get($mat-blue, 600),
+  app-default-text-color: map-get($mat-grey, 700),
+  app-primary-color: map-get($mat-grey, 800)
+);
+
+//
+// Set colors
+//
 .app-theme {
   &-light {
-    @include angular-material-theme($app-theme-light);
-    @include app-theme-customization($app-theme-light);
+    @include angular-material-theme($angular-theme-light);
+    @include app-theme($angular-theme-light, $app-theme-light);
   }
   &-dark {
-    @include angular-material-theme($app-theme-dark);
-    @include app-theme-customization($app-theme-dark);
+    @include angular-material-theme($angular-theme-dark);
+    @include app-theme($angular-theme-dark, $app-theme-dark);
   }
 }

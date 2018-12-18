@@ -1,0 +1,17 @@
+<h3 class="header-level-3">Folders</h3>
+<div class="grid-container">
+  <mat-grid-list [cols]="gridCols" rowHeight="48px" gutterSize="20px">
+    <mat-grid-tile *ngFor="let folder of folders">
+      <app-tile-folder class="tile-item" [data]="folder.name"></app-tile-folder>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<h3 class="header-level-3">Files</h3>
+<div class="grid-container">
+  <mat-grid-list [cols]="gridCols" rowHeight="144px" gutterSize="20px">
+    <mat-grid-tile *ngFor="let file of files">
+      <app-tile-file class="tile-item" [data]="file.name"></app-tile-file>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

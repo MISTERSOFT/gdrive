@@ -1,21 +1,44 @@
-@mixin app-theme-customization($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
-  $warn: map-get($theme, warn);
+@mixin app-theme($angular-theme, $app-theme) {
+  $primary: map-get($angular-theme, primary);
+  $accent: map-get($angular-theme, accent);
+  $warn: map-get($angular-theme, warn);
 
-  $white: white;
-  $app-theme-light-text-color-grey: #616161;
-
-  .app-primary-bg {
-    background: mat-color($primary);
-  }
+  // $white: white;
+  $app-selected: map-get($app-theme, app-selected);
+  $app-default-text-color: map-get($app-theme, app-default-text-color);
+  $app-primary-color: map-get($app-theme, app-primary-color);
 
   .mat-toolbar.app-toolbar {
-    background: $white;
+    background: $app-primary-color;
   }
 
   .mat-list-item.app-list-item {
-    color: $app-theme-light-text-color-grey;
+    color: $app-default-text-color;
+  }
+
+  .app-dropdown-triangle {
+    &[data-is-active="true"] {
+      color: $app-selected;
+      background: rgba($app-selected, 0.14);
+    }
+    &[data-is-dropdown="true"]::before {
+      border-color: transparent transparent transparent $app-default-text-color;
+    }
+    &:not([data-is-active="true"]):hover {
+      background: lighten($app-default-text-color, 56%);
+    }
+  }
+
+  .tile {
+    color: $app-default-text-color;
+    &[data-selected="true"], & [data-selected="true"] {
+      background: rgba($app-selected, 0.14);
+    }
+    &__text {
+      [data-selected="true"] & {
+        color: $app-selected;
+      }
+    }
   }
 }
 

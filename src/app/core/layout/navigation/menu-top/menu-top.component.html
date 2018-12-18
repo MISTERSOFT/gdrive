@@ -21,10 +21,30 @@
           <mat-icon>keyboard_arrow_down</mat-icon>
         </button>
       </div>
-      <div class="user-profile">
-        <a mat-icon-button>
-          <div class="avatar-round">S</div>
-        </a>
+      <div>
+          <!-- (click)="switchTheme()" -->
+        <!-- <button *ngIf="theme.theme$ | async as themeValue" mat-icon-button [matMenuTriggerFor]="colorsMenu">
+          <div class="rounded theme-color" [attr.data-is-dark]="themeValue === THEME_ENUM.LIGHT ? false : true">
+            {{ (themeValue === THEME_ENUM.LIGHT ? 'L' : 'D') }}
+          </div>
+        </button> -->
+        <!-- <mat-menu #colorsMenu="matMenu">
+          <mat-grid-list cols="2" rowHeight="40px" class="theme-palette">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <div mat-menu-item>
+                <div class="rounded theme-color" [style.background]="'red'"></div>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <div mat-menu-item>
+                <div class="rounded theme-color" [style.background]="'red'"></div>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </mat-menu> -->
+        <button mat-icon-button>
+          <div class="avatar rounded">S</div>
+        </button>
       </div>
     </div>
   </mat-toolbar-row>
@@ -52,9 +72,9 @@
         </mat-menu>
       </div>
       <div>
-        <button mat-icon-button>
-          <mat-icon>view_list</mat-icon>
-          <!-- <mat-icon>view_comfy</mat-icon> -->
+        <button mat-icon-button (click)="switchView()">
+          <mat-icon *ngIf="isTilesView">view_list</mat-icon>
+          <mat-icon *ngIf="isListView">view_comfy</mat-icon>
         </button>
         <button mat-icon-button>
           <mat-icon>info</mat-icon>

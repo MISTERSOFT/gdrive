@@ -1,0 +1,47 @@
+// @import '~src/assets/themes/_variables';
+
+.flex-column {
+  flex-direction: column;
+}
+
+.tile {
+  // color: $app-text-default-color;
+  background: white;
+  border: 1px solid #EEEEEE;
+  border-radius: 6px;
+  user-select: none;
+  overflow: hidden;
+  transition: none;
+
+  &.folder {
+    height: 48px;
+  }
+  &.file {
+    height: 144px;
+  }
+  // &[data-selected="true"] {
+  //   background: rgba($app-selected, 0.14);
+  // }
+  &__preview {
+    height: 144px;
+    width: 100%;
+    background: grey;
+  }
+  &__icon {
+    height: 24px;
+    width: 24px;
+    margin: 12px;
+  }
+  &__text {
+    flex: 1;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: 12px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    // [data-selected="true"] & {
+    //   color: $app-selected;
+    // }
+  }
+}
